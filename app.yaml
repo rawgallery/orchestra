@@ -1,1 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+default_expiration: "7d"
+
+handlers:
+- url: /(.*\.(appcache|manifest))
+  mime_type: text/cache-manifest
+  static_files: static/\1
+  upload: static/(.*\.(appcache|manifest))
+  expiration: "0m"
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
 
