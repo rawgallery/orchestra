@@ -152,3 +152,5 @@ handlers:
 - url: /(.*)
   static_files: static/\1
   upload: static/(.*)
+
+dev_appserver.py app.yaml --port 3000
